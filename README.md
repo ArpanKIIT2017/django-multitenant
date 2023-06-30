@@ -10,6 +10,9 @@ The following link talks more about the trade-offs on when and how to choose the
 
 https://www.citusdata.com/blog/2016/10/03/designing-your-saas-database-for-high-scalability/
 
+The following blogpost is a good starting point to start to use django-multitenant
+https://www.citusdata.com/blog/2023/05/09/evolving-django-multitenant-to-build-scalable-saas-apps-on-postgres-and-citus/
+
 **Other useful links on multi-tenancy**:
 1. https://www.citusdata.com/blog/2017/03/09/multi-tenant-sharding-tutorial/
 1. https://www.citusdata.com/blog/2017/06/02/scaling-complex-sql-transactions/
@@ -43,7 +46,7 @@ In order to use this library you can either use Mixins or have your models inher
    ```
 2. All models should inherit the TenantModel class.
    `Ex: class Product(TenantModel):`
-3. Define a static variable named tenant_id and specify the tenant column using this variable.You can define tenant_id in three ways. Any of them is acceptavle 
+3. Define a static variable named tenant_id and specify the tenant column using this variable.You can define tenant_id in three ways. Any of them is acceptable 
    * Using TenantMeta.tenant_field_name variable
    * Using TenantMeta.tenant_id variable
    * Using tenant_id field
